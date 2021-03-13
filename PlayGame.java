@@ -1,16 +1,17 @@
 package zombieLand;
 
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
 
 public class PlayGame {
     Scanner sc = new Scanner(System.in);
 
     public void play(Hero hero) {
-        Zombie zombie = null;
+        zombieLand.Zombie zombie = null;
         boolean i = true;
 
         System.out.println("Stage 1-1");
-        zombie = new WeakZombie();
+        zombie = new zombieLand.WeakZombie();
         System.out.println(zombie.getName() + "가(이) 나타났다!");
         System.out.println(zombie.getDesc());
 
@@ -26,7 +27,7 @@ public class PlayGame {
         i = true;
 
         System.out.println("Stage 1-2");
-        zombie = new WeakZombie();
+        zombie = new zombieLand.WeakZombie();
         System.out.println(zombie.getName() + "가(이) 나타났다!");
         zombie.getDesc();
 
@@ -42,7 +43,7 @@ public class PlayGame {
         i = true;
 
         System.out.println("Stage 1-3");
-        zombie = new SuperZombie();
+        zombie = new zombieLand.SuperZombie();
         System.out.println(zombie.getName() + "가(이) 나타났다!");
         zombie.getDesc();
 
@@ -61,7 +62,7 @@ public class PlayGame {
         hero.setSkillCnt(hero.getSkillCnt()+1);
 
         System.out.println("Stage 2-1");
-        zombie = new SuperZombie();
+        zombie = new zombieLand.SuperZombie();
         System.out.println(zombie.getName() + "가(이) 나타났다!");
         zombie.getDesc();
 
@@ -77,7 +78,7 @@ public class PlayGame {
         i = true;
 
         System.out.println("Stage 2-2");
-        zombie = new SuperZombie();
+        zombie = new zombieLand.SuperZombie();
         System.out.println(zombie.getName() + "가(이) 나타났다!");
         zombie.getDesc();
 
@@ -145,7 +146,7 @@ public class PlayGame {
         i = true;
 
         System.out.println("Stage 3-3");
-        zombie = new ZombieKing();
+        zombie = new zombieLand.ZombieKing();
         System.out.println(zombie.getName() + "가(이) 나타났다!");
         zombie.getDesc();
 
@@ -161,7 +162,7 @@ public class PlayGame {
         return;
     }
 
-    public boolean fight(Hero h, Zombie z) {
+    public boolean fight(Hero h, zombieLand.Zombie z) {
         int select;
         boolean ans;
 

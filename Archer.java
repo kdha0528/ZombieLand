@@ -1,6 +1,6 @@
 package zombieLand;
 
-public class Archer extends Hero{
+public class Archer extends zombieLand.Hero {
 
     public Archer(){
         super(3,1,1,1);

@@ -46,18 +46,18 @@ public abstract class Hero {
         this.specialSkillCnt = specialSkillCnt;
     }
 
-    public void attack(Hero h, Zombie z){
+    public void attack(Hero h, zombieLand.Zombie z){
         System.out.println("Attack!!");
         z.setLife(z.getLife()-h.getAtk());
     }
 
 
-    public void skill(Hero h, Zombie z){
+    public void skill(Hero h, zombieLand.Zombie z){
         z.setLife(z.getLife()-2);
         h.setSkillCnt(h.getSkillCnt()-1);
     }
 
-    public void specialSkill(Hero h, Zombie z){
+    public void specialSkill(Hero h, zombieLand.Zombie z){
         z.setLife(0);
         h.setSpecialSkillCnt(h.getSpecialSkillCnt()-1);
     }

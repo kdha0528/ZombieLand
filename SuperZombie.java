@@ -1,6 +1,6 @@
 package zombieLand;
 
-public class SuperZombie extends Zombie {
+public class SuperZombie extends zombieLand.Zombie {
 
     private String name;
 

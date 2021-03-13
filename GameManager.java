@@ -248,7 +248,7 @@ public class GameManager {
     public void gameStart(User player) {
         int select;
         boolean i = true;
-        Hero hero = null;
+        zombieLand.Hero hero = null;
 
         while (i) {
             System.out.println("1. Worrior");
@@ -261,11 +261,11 @@ public class GameManager {
 
             switch (select) {
                 case 1 -> {
-                    hero = new Worrior();
+                    hero = new zombieLand.Worrior();
                     i = false;
                 }
                 case 2 -> {
-                    hero = new Wizard();
+                    hero = new zombieLand.Wizard();
                     i = false;
                 }
                 case 3 -> {
@@ -290,7 +290,7 @@ public class GameManager {
         String start_time_m = simpleDateFormat1.format(new Date());
         String start_time_s = simpleDateFormat2.format(new Date());
 
-        PlayGame p = new PlayGame();
+        zombieLand.PlayGame p = new zombieLand.PlayGame();
         p.play(hero);
 
         String finish_time_m = simpleDateFormat1.format(new Date());
